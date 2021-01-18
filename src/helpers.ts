@@ -5,15 +5,14 @@ export function splitIntoColumns(tensor: tf.Tensor) {
   return tensorArr;
 }
 
-export function normalizeColumn(tensor: tf.Tensor<tf.Rank>) {
+export function normalize(tensor: tf.Tensor<tf.Rank>) {
   const max = tensor.max(0);
   return tensor.div(max);
 }
 
-export function createRandomDiv(half: boolean = false) {
+export function createRandomDiv() {
   const div = document.createElement("section");
   div.id = `div_${Math.random() * 10000}`;
-  // half && (div.style.width = "50%");
   document.body.appendChild(div);
   return div;
 }
