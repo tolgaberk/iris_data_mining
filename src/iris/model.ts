@@ -23,7 +23,7 @@ model.add(
     activation: "sigmoid",
   })
 );
-// i have tried every layer in relu but i gave
+// i have tried every layer in relu but it gave
 // suprisingly bad performance so i tried
 // combinations and stick with this configuration
 // of activation functions
