@@ -8,8 +8,8 @@ export function normalize(tensor: tf.Tensor<tf.Rank>) {
 
 export function normalizeArray(array: number[]) {
   const max = Math.max(...array);
-  for (let element of array) {
-    element /= max;
+  for (let i = 0; i < array.length; i++) {
+    array[i] /= max;
   }
   return array;
 }
