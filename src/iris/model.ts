@@ -6,7 +6,7 @@ const model = tf.sequential();
 // add 3 dense layers with 4 input nodes 9 hidden nodes in 1 hidden layer and 3 output nodes
 model.add(
   tf.layers.dense({
-    inputShape: [4],
+    inputShape: [4], // input shape is 4 because we have 4 features
     units: 4,
     activation: "sigmoid",
   })
@@ -19,7 +19,7 @@ model.add(
 );
 model.add(
   tf.layers.dense({
-    units: 3,
+    units: 3, // we have 3 output beacuse our output class can only be 3 types of iris flower
     activation: "sigmoid",
   })
 );
